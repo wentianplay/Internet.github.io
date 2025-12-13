@@ -1,211 +1,244 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>文天玩WenTianPlay开发日志</title>
-    <style>
-        :root {
-            --primary-green: #2c5f2d;
-            --secondary-green: #97bc62;
-            --light-green: #e0f0e5;
-            --text-dark: #204728;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', '微软雅黑', sans-serif;
-        }
-
-        body {
-            background-color: var(--light-green);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        header {
-            text-align: center;
-            padding: 2rem 0;
-            background: var(--primary-green);
-            color: white;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .log-entry {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            margin-bottom: 2rem;
-            display: none;
-        }
-
-        .log-entry.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-
-        h2 {
-            color: var(--primary-green);
-            margin-bottom: 1rem;
-            border-bottom: 2px solid var(--secondary-green);
-            padding-bottom: 0.5rem;
-        }
-
-        .date {
-            color: var(--secondary-green);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .content {
-            margin-bottom: 1.5rem;
-        }
-
-        .navigation {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 2rem;
-        }
-
-        button {
-            background: var(--primary-green);
-            color: white;
-            border: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        button:hover {
-            background: var(--secondary-green);
-            transform: translateY(-2px);
-        }
-
-        button:disabled {
-            background: #cccccc;
-            cursor: not-allowed;
-        }
-
-        .external-links {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 1rem;
-        }
-
-        .external-links a {
-            color: var(--primary-green);
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .external-links a:hover {
-            text-decoration: underline;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>文天玩WenTianPlay开发日志-2</h1>
-            <p>记录游戏开发的点点滴滴</p>
-        </div>
-    </header>
-
-    <div class="container">
-        <!-- 日志条目 -->
-        <div class="log-entry active" data-index="1">
-            <h2>核心玩法初步确定</h2>
-            <div class="date">2017年3月12日</div>
-            <div class="content">
-                <p>经过多次讨论，我们确定了以开放世界探索为核心，结合中国传统文化元素的玩法框架...</p>
-                <ul>
-                    <li>完成基础移动系统原型</li>
-                    <li>搭建测试场景</li>
-                    <li>确定美术风格方向</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="log-entry" data-index="2">
-            <h2>角色控制器优化</h2>
-            <div class="date">2017年3月19日</div>
-            <div class="content">
-                <p>本周重点优化了角色控制的手感，主要改进包括：</p>
-                <ul>
-                    <li>添加攀爬系统</li>
-                    <li>改进物理碰撞检测</li>
-                    <li>优化相机跟随逻辑</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="log-entry" data-index="3">
-            <h2>首次内部测试</h2>
-            <div class="date">2017年3月21日</div>
-            <div class="content">
-                <p>进行了第一次内部测试，收集到以下反馈：</p>
-                <ul>
-                    <li>移动跳跃手感需要微调</li>
-                    <li>部分场景光照需要优化</li>
-                    <li>UI交互需要简化</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="navigation">
-            <button onclick="previousEntry()">上一页</button>
-            <button onclick="nextEntry()">下一页</button>
-        </div>
-
-        <!-- 外部链接 -->
-        <div class="external-links">
-            <a href="http://1.wentianplay.net" target="_blank">网页上一页</a>
-            <a href="http://3.wentianplay.net" target="_blank">网页下一页</a>
-        </div>
-    </div>
+    <meta name="keywords" content="300英雄,300英雄官网,300,动漫网游,英雄对战,3D动漫,DotA,竞技,MOBA,300英雄盒子,300英雄补丁,300英雄战场,300英雄竞技场,300英雄金币,300英雄钻石,300英雄神器,300英雄专属,300英雄开黑,300英雄cdk兑换,300英雄视频,300英雄壁纸,300英雄贴吧,300英雄战场,300英雄攻略,300英雄论坛,300英雄盒子,300英雄觉醒,300英雄音乐,300英雄bgm,300英雄战绩"
+    />
+    <meta name="description" content="《300英雄》是由上海跳跃网络研发的3D动漫英雄对战网游。玩家将化身为召唤师，选择上百种不同类型的动漫英雄进入游戏激烈的战斗中，为了争夺神秘的永恒之地而战。" />
+    <link rel="shortcut icon" href="/defaults/favicon.ico" type="image/x-icon">
+    <title>《300英雄》下载中心</title>
+    <link rel="stylesheet" href="style/index.888a8f0b6713a6b4.css">
+    <link rel="stylesheet" href="style/ny.888a8f0b6713a6b4.css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="https://doc.yongxiandata.com/sdk/client/js/yxdatasdk.min.js"></script>
 
     <script>
-        let currentEntry = 1;
-        const totalEntries = document.querySelectorAll('.log-entry').length;
-
-        function showEntry(index) {
-            document.querySelectorAll('.log-entry').forEach(entry => {
-                entry.classList.remove('active');
-                if(entry.dataset.index == index) {
-                    entry.classList.add('active');
-                }
-            });
-        }
-
-        function nextEntry() {
-            if(currentEntry < totalEntries) {
-                currentEntry++;
-                showEntry(currentEntry);
-            }
-        }
-
-        function previousEntry() {
-            if(currentEntry > 1) {
-                currentEntry--;
-                showEntry(currentEntry);
-            }
-        }
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?46ce63b66aec87d9a9fd921f71103bb6";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
     </script>
+
+    <script type="text/javascript">
+        window._agl = window._agl || [];
+        (function() {
+            _agl.push(
+                ['production', '_f7L2XwGXjyszb4d1e2oxPybgD']
+            );
+            (function() {
+                var agl = document.createElement('script');
+                agl.type = 'text/javascript';
+                agl.async = true;
+                agl.src = 'https://fxgate.baidu.com/angelia/fcagl.js?production=_f7L2XwGXjyszb4d1e2oxPybgD';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(agl, s);
+            })();
+        })();
+    </script>
+
+</head>
+
+<body>
+    <div class="viewHead">
+        <div class="headers">
+            <div class="lf">
+                <a href="https://300.jumpw.com/index.html?cid=0"></a>
+            </div>
+            <div class="rtbox">
+                <div class="navbox">
+                    <div class="item">
+                        <a href="https://300.jumpw.com/index.html?cid=0">
+                            <p class="znsoma">官网首页</p>
+                            <p class="ensoma">HOME</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="rt">
+                    <a href="https://passport.jumpw.com/login.jsp" target="_blank">用户登录</a>
+                    <a href="http://customer.jumpw.com/" class="service" target="_blank">客服中心</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="head">
+            <div class="title" id="title_download"></div>
+            <div class="location">
+                <a href="https://300.jumpw.com/index.html?cid=0">首页</a>&gt; <a href="javascript:;">下载</a>
+            </div>
+        </div>
+        <div class="ny_cont_01">
+            <div class="download_cont">
+                <div class="download-tit">《300英雄》极速下载<span>/ Fast Installation</span></div>
+                <div class="zhanw">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td style="width:151px;">
+                                    <p align="right">
+                                        <span style="font-size:14px;">&nbsp; &nbsp;<strong>文件大小:</strong></span>
+                                    </p>
+                                </td>
+                                <td style="width:403px;">
+                                    <p align="left">
+                                        <span style="font-size:12px;">&nbsp;1,181 KB</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:151px;height:18px;">
+                                    <p align="right">
+                                        <span style="font-size:14px;"><strong>版本号:</strong></span>
+                                    </p>
+                                </td>
+                                <td style="width:403px;height:18px;">
+                                    <p align="left">
+                                        <span style="font-size:12px;">&nbsp;v25.4.15.19</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:151px;height:24px;">
+                                    <p align="right">
+                                        <span style="font-size:14px;"><strong>MD5</strong><strong>校验码:</strong></span>
+                                    </p>
+                                </td>
+                                <td style="width:403px;height:24px;">
+                                    <p align="left">
+                                        <span style="font-size:12px;">&nbsp;</span>69777F6F81C4C188B4EA99406BA620E8
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:151px;">
+                                    <p align="right">
+                                        <span style="font-size:14px;"><strong>更新日期:</strong></span>
+                                    </p>
+                                </td>
+                                <td style="width:403px;">
+                                    <p align="left">
+                                        <span style="font-size:12px;">&nbsp;2025-04-17</span>
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="btn_area">
+                        <a class="btn-js-down xb" title="极速下载" data-agl-cvt="6" id="TYef1185" href="https://ad.jumpw.com/download.do?pr=6143cd4549fc4a9b94a48fe1cb363196"></a>
+                    </div>
+                    <div class="hint_QNA">
+                        <section>
+                            <input type="checkbox" id="qna1" class="toggle">
+                            <label class="title" for="qna1">极速下载失败/下载后无法安装怎么办？</label>
+                            <div class="detail">
+                                <p>下载、安装、使用中出现问题请 <a class="green_dl normal_text" title="300英雄绿色版" href="https://ad.jumpw.com/download.do?pr=4f01129312944ddb82adc4d04b655495" target="_blank">
+                    点击这里下载300英雄绿色版 </a>
+                                </p>
+                            </div>
+                        </section>
+                        <section>
+                            <input type="checkbox" id="qna2" class="toggle">
+                            <label class="title" for="qna2">点击按钮后没反应，没有自动开始下载怎么办？</label>
+                            <div class="detail">
+                                <p>请您检查自己的浏览器设置，是否关闭了“允许浏览器自动下载”功能，若检查后发现并无异常，请在上方折叠问题中选择绿色版进行下载。</p>
+                            </div>
+                        </section>
+                        <section>
+                            <input type="checkbox" id="qna3" class="toggle">
+                            <label class="title" for="qna3">游戏打不开怎么办？</label>
+                            <div class="detail">
+                                <p>请优先尝试使用客户端自带的修复功能，若修复无效，请检查 DirectX 及各种游戏需要的插件/配置文件是否完整，并在重启电脑后再运行游戏。</p>
+                            </div>
+                        </section>
+                        <section>
+                            <input type="checkbox" id="qna4" class="toggle">
+                            <label class="title" for="qna4">游戏启动时遇到异常问题怎么解决？</label>
+                            <div class="detail">
+                                <p>若您在登录游戏时遇到该异常问题，请优先尝试以下操作进行解决：</p>
+                                <ol>
+                                    <li>彻底关闭游戏客户端及相关进程。</li>
+                                    <li>前往游戏安装目录（默认路径：JumpGame\300Hero），手动删除名为 <strong>datauploader.dll</strong> 的文件。</li>
+                                    <li>双击运行同目录下的 <strong>launcher.exe</strong> 文件，尝试重新启动游戏。</li>
+                                </ol>
+                                <p>若操作后问题仍未解决，请通过以下方式联系我们：</p>
+                                <ul>
+                                    <li>客服中心：<a class="normal_text" href="https://cs.jumpw.com" target="_blank">https://cs.jumpw.com</a>
+                                    </li>
+                                    <li>客服热线：4006520300</li>
+                                    <li>微信客服：300英雄公众号 - 联系我们 - 微信客服</li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section>
+                            <input type="checkbox" id="qna5" class="toggle">
+                            <label class="title" for="qna5">《300英雄》对电脑配置有什么要求？</label>
+                            <div class="detail">
+                                <p>您可以下拉本页面至最下方，了解关于游戏推荐配置及最低配置的更多详情。</p>
+                            </div>
+                        </section>
+                        <section>
+                            <input type="checkbox" id="qna6" class="toggle">
+                            <label class="title" for="qna6">启动游戏时遭遇弹窗提示“该账号近期检测到异常行为，为了您的帐号安全，请勿使用第三方非法软件或插件并及时更改密码以提高账号安全”，无法正常启动怎么办？</label>
+                            <div class="detail">
+                                <p>为了提供一个绿色健康的游戏环境，游戏内置了第三方插件检测功能，请您检查后台并关闭其他可能影响或修改客户端的第三方软件及插件后重新启动游戏。</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="download_cont">
+                <div class="download-tit">配置要求<span>/ CONFIGURATION REQUIREMENTS</span>
+                </div>
+                <div class="require-table">
+                    <table>
+                        <tr>
+                            <td width="175"></td>
+                            <td>常规基本配置</td>
+                            <td>推荐配置</td>
+                        </tr>
+                        <tr>
+                            <td>cpu</td>
+                            <td>Intel/AMD 双核2G</td>
+                            <td>Intel/AMD 双核2.4G</td>
+                        </tr>
+                        <tr>
+                            <td>内存容量</td>
+                            <td>4 GB</td>
+                            <td>4 GB</td>
+                        </tr>
+                        <tr>
+                            <td>硬盘内容</td>
+                            <td>10 GB</td>
+                            <td>10 GB</td>
+                        </tr>
+                        <tr>
+                            <td>显卡要求</td>
+                            <td>GeForce 7600GS/ATI X1600pro/XT 256M显存<br>支持ShaderModel3.0同等配置显卡</td>
+                            <td>GeForce 9600GT/ATI Radeon 512M显存<br>支持ShaderModel3.0同等配置显卡</td>
+                        </tr>
+                        <tr>
+                            <td>操作系统</td>
+                            <td>WindowsXP/Vista/Win7/win8/win10</td>
+                            <td>WindowsXP/Vista/Win7/win8/win10</td>
+                        </tr>
+                        <tr>
+                            <td>DIRECTX</td>
+                            <td>9.0C</td>
+                            <td>9.0C</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.SuperSlide.2.1.3.js"></script>
+        <script src="js/ny.js"></script>
+        <script type="text/javascript" src="js/Track_YX.js"></script>
 </body>
+
 </html>
